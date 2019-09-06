@@ -1,4 +1,4 @@
-## コンテナを作成して、起動
+## コンテナを作成して起動
 ```
 $ docker-compose up -d
 ```
@@ -25,6 +25,11 @@ $ docker-compose exec web /bin/bash
 $ docker-compose exec db /bin/bash
 ```
 
+## コンテナとイメージを更新して起動
+```
+$ docker-compose up -d --build
+```
+
 ## 全てのコンテナ・イメージを削除
 ### 全てのコンテナを停止
 ```
@@ -36,7 +41,7 @@ $ docker stop $(docker ps -q)
 $ docker rm $(docker ps -q -a)
 ```
 
-### 全てのイマージを削除
+### 全てのイメージを削除
 ```
 $ docker rmi $(docker images -q) -f
 ```
